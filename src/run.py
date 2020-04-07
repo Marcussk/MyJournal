@@ -1,7 +1,7 @@
 import os
 
 from myjournal import app
-from myjournal.api import user
+from myjournal.api import user, task
 
 
 if __name__ == '__main__':

@@ -6,12 +6,17 @@
 * add import to db_setup script and run it (otherwise changes wont be reflected in db)
 * test it!
 
-## Creating new user:
+## Creating new objects:
 ```
 from myjournal import db
 from myjournal.models.user import User
 me = User(username="marcussk", email="marek.beno.dev@gmail.com")
 db.session.add(me)
+
+task_1 = Task(description="My first task!", user_id=1)
+db.session.add(task_1)
+
 db.session.commit()
 User.query.all()
+Task.query.all()
 ```
